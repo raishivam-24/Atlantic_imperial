@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
@@ -45,6 +46,8 @@
     <div class="hero-actions">
       <a href="#floorplans" class="btn-primary">Explore Homes</a>
       <a href="#contact" class="btn-outline">Book a Site Visit</a>
+      <a href="brochure/atlantic-imperial-brochure.pdf" class="btn-outline" target="_blank" rel="noopener">View Brochure</a>
+      <a href="brochure/atlantic-imperial-brochure.pdf" class="btn-outline" download="Atlantic_Imperial_Brochure.pdf">⬇ Download Brochure</a>
     </div>
   </div>
   <div class="hero-stats">
@@ -164,7 +167,13 @@
     <!-- 4 BHK -->
     <div class="fp-panel active" id="tab-4bhk" role="tabpanel">
       <div class="fp-img-wrap">
-        <img src="images/4bhk.png" style="width:100%;height:auto;object-fit:contain;" alt="4 BHK Floor Plan">
+        <div class="view-switch">
+  <button class="view-btn active" onclick="switchView('4bhk','2d',this)">2D View</button>
+  <button class="view-btn" onclick="switchView('4bhk','3d',this)">3D View</button>
+</div>
+
+<img src="images/4bhk.png" id="4bhk-2d" class="plan-view active-plan" alt="4 BHK 2D">
+<img src="images/4bhk.png" id="4bhk-3d" class="plan-view" alt="4 BHK 3D">
         <!-- <div class="fp-tag">Isometric View</div> -->
       </div>
       <div class="fp-info">
@@ -197,8 +206,13 @@
     <!-- 3 BHK -->
     <div class="fp-panel" id="tab-3bhk" role="tabpanel">
       <div class="fp-img-wrap">
-       <img src="images/3bhk.png" style="width:500px;height:420px;object-fit:cover;" alt="3 BHK Floor Plan">
-        <!-- <div class="fp-tag">Isometric View</div> -->
+      <div class="view-switch">
+  <button class="view-btn active" onclick="switchView('3bhk','2d',this)">2D View</button>
+  <button class="view-btn" onclick="switchView('3bhk','3d',this)">3D View</button>
+</div>
+
+<img src="images/3bhk.png" id="3bhk-2d" class="plan-view active-plan" alt="3 BHK 2D">
+<img src="images/3bhk.png" id="3bhk-3d" class="plan-view" alt="3 BHK 3D">
       </div>
       <div class="fp-info">
         <div class="fp-name">3 BHK Flat</div>
@@ -229,7 +243,13 @@
     <!-- 2 BHK -->
     <div class="fp-panel" id="tab-2bhk" role="tabpanel">
       <div class="fp-img-wrap">
-        <img src="images/2bhk.png" style="width:500px;height:420px;object-fit:cover;" alt="2 BHK Floor Plan">
+        <div class="view-switch">
+  <button class="view-btn active" onclick="switchView('2bhk','2d',this)">2D View</button>
+  <button class="view-btn" onclick="switchView('2bhk','3d',this)">3D View</button>
+</div>
+
+<img src="images/2bhk.png" id="2bhk-2d" class="plan-view active-plan" alt="2 BHK 2D">
+<img src="images/2bhk.png" id="2bhk-3d" class="plan-view" alt="2 BHK 3D">
         <!-- <div class="fp-tag">Isometric View</div> -->
       </div>
       <div class="fp-info">

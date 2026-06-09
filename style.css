@@ -1226,3 +1226,34 @@ footer {
 
   footer { padding: 48px 24px 32px; }
 }
+.view-switch{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-bottom:20px;
+}
+
+.view-btn{
+  padding:10px 20px;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+  background:#eee;
+  font-weight:600;
+}
+
+.view-btn.active{
+  background:#c9a35f;
+  color:#fff;
+}
+
+.plan-view{
+  display:none;
+  width:100%;
+  max-width:700px;
+  margin:auto;
+}
+
+.active-plan{
+  display:block;
+}

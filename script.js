@@ -209,3 +209,23 @@ const statsObserver = new IntersectionObserver((entries) => {
 
 const heroSection = document.getElementById('hero');
 if (heroSection) statsObserver.observe(heroSection);
+
+function switchView(flat, view, btn){
+
+  const wrap = btn.parentElement;
+
+  wrap.querySelectorAll('.view-btn').forEach(button=>{
+    button.classList.remove('active');
+  });
+
+  btn.classList.add('active');
+
+  const container = wrap.parentElement;
+
+  container.querySelectorAll('.plan-view').forEach(img=>{
+    img.classList.remove('active-plan');
+  });
+
+  document.getElementById(`${flat}-${view}`)
+          .classList.add('active-plan');
+}
